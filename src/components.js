@@ -101,7 +101,7 @@ export default function(editor, opt = {}) {
         if (!comps.length) {
           comps.reset();
           comps.add(`
-            <span data-js="countdown" class="${pfx}-cont">
+            <span draggable="false" data-js="countdown" class="${pfx}-cont">
               <div class="${pfx}-block">
                 <div data-js="countdown-day" class="${pfx}-digit"></div>
                 <div class="${pfx}-label">${c.labelDays}</div>
@@ -118,8 +118,9 @@ export default function(editor, opt = {}) {
                 <div data-js="countdown-second" class="${pfx}-digit"></div>
                 <div class="${pfx}-label">${c.labelSeconds}</div>
               </div>
+                <span data-js="countdown-endtext" class="${pfx}-endtext"></span>
             </span>
-            <span data-js="countdown-endtext" class="${pfx}-endtext"></span>
+          
           `);
         }
 
